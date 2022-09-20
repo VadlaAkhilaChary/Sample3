@@ -1,0 +1,30 @@
+class HoldMinMax{
+int min =0;
+int max =0;
+}
+public class MinMaxInArray
+{
+public Static HoldMinMax findMinMax(int []arr){
+int min = Integer.MIN_VALUE;
+int max = Integer.MAX_VALUE;
+for (int i =0;i<arr.length;i++)
+{
+if(arr[i]>max){
+max=arr[i];
+}
+if(arr[i]<min){
+min=arr[i];
+}
+}
+HoldMinMax hold = new HoldMinMax();
+hold.min=min;
+hold.max=max;
+}
+public static void main(String args[])
+{
+int []arr={12,13,14,15};
+HoldMinMax m = findMinMax(arr);
+System.out.println("Greater num : "+m.max);
+System.out.println("Smallest num: "+m.min);
+}
+}
